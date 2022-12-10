@@ -1,3 +1,6 @@
+# Figma
+
+Link for design [figma](https://www.figma.com/file/c3RarCwq533GF1rrTRQEES/Sorteador-de-amigo-secreto?node-id=35%3A300&t=KV9V3WCmETVu1kZn-0).
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
