@@ -4,7 +4,7 @@ import imgParticipante from '../../assets/participante.png';
 import imgLogo from '../../assets/logo.png';
 import imgSmallLogo from '../../assets/logo-pequeno.png';
 
-const Content = styled.div`
+const Content = styled.header`
   display: flexbox;
   background: #4b69fd;
   border: 2px solid #000000;
