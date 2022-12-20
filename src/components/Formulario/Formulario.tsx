@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { useAdicionarParticipante } from '../../hooks/useAdicionarPartipante';
 import { useMensagemErro } from '../../hooks/useMensagemErro';
+import { Content } from './FormularioStyle';
+import { HiUserAdd } from 'react-icons/hi';
 
 export const Formulario = () => {
   const [nome, setNome] = useState('');
@@ -18,16 +20,16 @@ export const Formulario = () => {
     inputRef.current?.focus();
   };
   return (
-    <form onSubmit={adicionarParticipante}>
+    <Content onSubmit={adicionarParticipante}>
       <input
         ref={inputRef}
         value={nome}
         onChange={(e) => setNome(e.target.value)}
-        type="text"
-        placeholder="Insira os nomes dos participantes"
+        type="text"        
+        placeholder={ "Insira os nomes dos participantes"}
       />
       <button disabled={!nome}>Adicionar</button>
       {mensagemDeErro && <p role={'alert'}>{mensagemDeErro}</p> }
-    </form>
+    </Content>
   );
 };

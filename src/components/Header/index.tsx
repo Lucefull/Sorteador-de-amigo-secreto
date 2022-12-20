@@ -5,17 +5,15 @@ import imgLogo from '../../assets/logo.png';
 import imgSmallLogo from '../../assets/logo-pequeno.png';
 
 const Content = styled.header`
-  display: flexbox;
+  display: flex;
   background: #4b69fd;
   border: 2px solid #000000;
-  
 
   flex-direction: column;
-  width: 100vw;
-  max-width: 400px;
-  //padding-top: 30px;
-  height: 384px;
-  justify-content: center;
+  width: auto;
+  height: 23.7em;
+  align-content: center;
+  align-items: center;
 
   div {
     background: url(${imgSmallLogo}) no-repeat;
@@ -25,32 +23,26 @@ const Content = styled.header`
 
   img {
     z-index: 1;
-    position: absolute;
     width: 328px;
     height: 158px;
-    left: 16px;
-    top: 203px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     flex-direction: row;
-    width: 100vw;
-    max-width: 1024px;
-    height: 384px;
-
+    height: 22.3em;
+    
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     div {
-      background: url(${imgLogo}) no-repeat;
+      background: url(${imgLogo}) no-repeat ;
       width: 351px;
       height: 117px;
     }
-    img {
+    img {      
+      //padding-top: 150px ;
       width: 450px;
       height: 277px;
-      left: 480px;
-      top: 121px;
     }
   }
 `;
