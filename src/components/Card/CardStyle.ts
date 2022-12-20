@@ -11,6 +11,6 @@ export const CardContent = styled.div`
     @media screen and (min-width: 768px) {
         width: auto;
         margin-top: -4.6em;
-        height: 23.6em;
+        height: 29em;
     }
 `;
