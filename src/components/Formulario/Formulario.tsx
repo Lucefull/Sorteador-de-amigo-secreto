@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useAdicionarParticipante } from '../../hooks/useAdicionarPartipante';
 import { useMensagemErro } from '../../hooks/useMensagemErro';
 import { Content } from './FormularioStyle';
-import { HiUserAdd } from 'react-icons/hi';
+import userIcon from '../../assets/person_add.svg'
 
 export const Formulario = () => {
   const [nome, setNome] = useState('');
@@ -21,15 +21,19 @@ export const Formulario = () => {
   };
   return (
     <Content onSubmit={adicionarParticipante}>
-      <input
-        ref={inputRef}
-        value={nome}
-        onChange={(e) => setNome(e.target.value)}
-        type="text"        
-        placeholder={ "Insira os nomes dos participantes"}
-      />
+      <div>
+      <img src={userIcon} alt="" />
+        <input
+          ref={inputRef}
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+          type="text"
+          placeholder={'Insira os nomes dos participantes'}
+        />
+      </div>
+
       <button disabled={!nome}>Adicionar</button>
-      {mensagemDeErro && <p role={'alert'}>{mensagemDeErro}</p> }
+      {mensagemDeErro && <p role={'alert'}>{mensagemDeErro}</p>}
     </Content>
   );
 };

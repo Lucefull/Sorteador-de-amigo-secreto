@@ -8,10 +8,15 @@ export const Content = styled.form`
   font-family: 'Poppins';
   font-size: 16px;
   padding: 5px;
+  img {
+    margin-left: 15px;
+    margin-top: 15px;
+    position: absolute;
+  }
   input {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     border-radius: 37px;
-    padding: 12px 28px;
+    padding: 12px 40px;
     width: 17em;
     font-family: 'Poppins';
     font-size: 16px;
@@ -29,11 +34,16 @@ export const Content = styled.form`
     font-family: 'Poppins';
     font-size: 16px;
     color: #000000;
+    width: 158px;
   }
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
-
+    img {
+      margin-left: 30px;
+      margin-top: 20px;
+      position: absolute;
+    }
     input {
       border-radius: 37px 0 0 37px;
       box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7);
