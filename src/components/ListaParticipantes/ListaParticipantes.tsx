@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useListaParticipantes } from '../../hooks/useListaParticipantes';
+import { useListaParticipantes } from '../../state/hooks/useListaParticipantes';
 
 const Ul = styled.ul`
   display: flex;

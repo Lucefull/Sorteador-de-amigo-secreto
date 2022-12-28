@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { useAdicionarParticipante } from '../../hooks/useAdicionarPartipante';
-import { useMensagemErro } from '../../hooks/useMensagemErro';
+import { useAdicionarParticipante } from '../../state/hooks/useAdicionarPartipante';
+import { useMensagemErro } from '../../state/hooks/useMensagemErro';
 import { Content } from './FormularioStyle';
 import userIcon from '../../assets/person_add.svg'
 
@@ -15,7 +15,7 @@ export const Formulario = () => {
 
   const adicionarParticipante = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    adicionarNaLista(nome);
+    adicionarNaLista(nome.trim());
     setNome('');
     inputRef.current?.focus();
   };

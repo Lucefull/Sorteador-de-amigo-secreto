@@ -5,7 +5,7 @@ interface Props {
   children?: React.ReactNode;
   disabled?: boolean;
   icon?: JSX.Element;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const ButonContent = styled.button`

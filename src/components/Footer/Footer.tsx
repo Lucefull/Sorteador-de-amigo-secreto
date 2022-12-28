@@ -1,15 +1,19 @@
 import { useNavigate } from 'react-router-dom';
-import { useListaParticipantes } from '../../hooks/useListaParticipantes';
+import { useListaParticipantes } from '../../state/hooks/useListaParticipantes';
 import { FooterStyle } from './FooterStyle';
 import Sacola from '../../assets/sacolas.png'
 import { Button } from '../Button';
 import { BsPlayCircle } from 'react-icons/bs'
+import { useSorteador } from '../../state/hooks/useSorteador';
 export const Footer = () => {
   const participantes = useListaParticipantes();
 
   const navegarPara = useNavigate();
 
+  const sortear = useSorteador();
+
   const iniciar = () => {
+    sortear();
     navegarPara('/sorteio');
   };
 
