@@ -1,16 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '../components/Button';
 import { useListaParticipantes } from '../state/hooks/useListaParticipantes'
 import { useResultadoSorteio } from '../state/hooks/useResultadoSorteio';
 
 export const Sorteio = () => {
     const participantes = useListaParticipantes();
-
     const [participanteDaVez, setParticipanteDaVez] = useState('');
-
     const [amigoSecreto, setAmigoSecreto] = useState('');
-
     const resultado = useResultadoSorteio();
+
+    useEffect(() => {
+        setParticipanteDaVez(participantes[0]!)
+    }, [])
+
 
     const sortear = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
