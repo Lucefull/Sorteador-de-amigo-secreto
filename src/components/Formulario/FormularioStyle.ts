@@ -37,6 +37,11 @@ export const Content = styled.form`
     width: 158px;
   }
 
+  p{
+    background-color: #F2D3D7;
+    margin: 5px;
+  }
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
     img {

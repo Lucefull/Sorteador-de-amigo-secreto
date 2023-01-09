@@ -25,6 +25,10 @@ const ButonContent = styled.button`
     background: rgba(75, 105, 253, 0.99);
   }
 
+  &[disabled] { 
+     background-color: #EE9A75;
+  }
+
   @media screen and (min-width: 768px) {
     width: 300px;
     padding: 16px 24px;
