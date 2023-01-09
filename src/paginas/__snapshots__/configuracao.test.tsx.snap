@@ -12,7 +12,7 @@ exports[`A pagina de configuracao Deve ser renderizada corretamente 1`] = `
         Vamos Começar!
       </h2>
       <form
-        class="sc-bcXHqe khSSBU"
+        class="sc-bcXHqe dEGdZW"
       >
         <div>
           <img
@@ -24,12 +24,12 @@ exports[`A pagina de configuracao Deve ser renderizada corretamente 1`] = `
             type="text"
             value=""
           />
+          <button
+            disabled=""
+          >
+            Adicionar
+          </button>
         </div>
-        <button
-          disabled=""
-        >
-          Adicionar
-        </button>
         
       </form>
       <ul
@@ -39,7 +39,7 @@ exports[`A pagina de configuracao Deve ser renderizada corretamente 1`] = `
         class="sc-dkrFOg cAumJJ"
       >
         <button
-          class="sc-hLBbgP hNhwVB"
+          class="sc-hLBbgP dhOcAp"
           disabled=""
         >
           <i>
