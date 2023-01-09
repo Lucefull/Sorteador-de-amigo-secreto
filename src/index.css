@@ -8,6 +8,10 @@ body {
   height: 100%;
 }
 
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
 code {
   font-family: 'Poppins', sans-serif;
 }
