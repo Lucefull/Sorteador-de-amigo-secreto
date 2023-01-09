@@ -42,8 +42,13 @@ export const Content = styled.form`
   }
 
   p{
+    text-align: center;
     background-color: #F2D3D7;
-    margin: 5px;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Poppins';
+    width: 20em;
+    margin: 15px;
   }
 
   @media screen and (min-width: 768px) {
@@ -59,6 +64,9 @@ export const Content = styled.form`
       border-radius: 37px 0 0 37px;
       box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7);
       padding: 18px 37px 18px 107px;
+    }
+    p{
+      width: 35em;
     }
     button {
       border-radius: 0 37px 37px 0;

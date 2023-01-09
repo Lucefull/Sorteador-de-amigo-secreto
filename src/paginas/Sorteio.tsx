@@ -129,6 +129,7 @@ export const Sorteio = () => {
               placeholder="Selecione o seu nome"
               value={participanteDaVez}
               onChange={(e) => setParticipanteDaVez(e.target.value)}>
+              <option>Selecione seu nome</option>
               {participantes.map((e) => (
                 <option key={e}>{e}</option>
               ))}
