@@ -1,5 +1,5 @@
 import { useRecoilValue } from "recoil"
-import { erroState } from "../state/atom";
+import { erroState } from "../atom";
 
 export const useMensagemErro = () =>{
     const mensagem = useRecoilValue(erroState);

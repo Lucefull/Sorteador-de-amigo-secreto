@@ -5,7 +5,7 @@ interface Props {
   children?: React.ReactNode;
   disabled?: boolean;
   icon?: JSX.Element;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const ButonContent = styled.button`
@@ -23,6 +23,10 @@ const ButonContent = styled.button`
 
   &:hover {
     background: rgba(75, 105, 253, 0.99);
+  }
+
+  &[disabled] { 
+     background-color: #EE9A75;
   }
 
   @media screen and (min-width: 768px) {

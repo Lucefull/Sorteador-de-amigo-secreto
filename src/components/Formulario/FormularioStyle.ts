@@ -24,6 +24,10 @@ export const Content = styled.form`
       outline: none;
     }
   }
+  div {
+    flex-direction: column;
+    text-align: center;
+  }
   button {
     border-radius: 37px;
     background: #c4c4c4;
@@ -37,8 +41,20 @@ export const Content = styled.form`
     width: 158px;
   }
 
+  p{
+    text-align: center;
+    background-color: #F2D3D7;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Poppins';
+    width: 20em;
+    margin: 15px;
+  }
+
   @media screen and (min-width: 768px) {
-    flex-direction: row;
+    div {
+      flex-direction: row;
+    }
     img {
       margin-left: 30px;
       margin-top: 20px;
@@ -48,6 +64,9 @@ export const Content = styled.form`
       border-radius: 37px 0 0 37px;
       box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7);
       padding: 18px 37px 18px 107px;
+    }
+    p{
+      width: 35em;
     }
     button {
       border-radius: 0 37px 37px 0;

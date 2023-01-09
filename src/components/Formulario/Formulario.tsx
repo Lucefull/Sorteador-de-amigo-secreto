@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
-import { useAdicionarParticipante } from '../../hooks/useAdicionarPartipante';
-import { useMensagemErro } from '../../hooks/useMensagemErro';
+import { useAdicionarParticipante } from '../../state/hooks/useAdicionarPartipante';
+import { useMensagemErro } from '../../state/hooks/useMensagemErro';
 import { Content } from './FormularioStyle';
-import userIcon from '../../assets/person_add.svg'
+import userIcon from '../../assets/person_add.svg';
 
 export const Formulario = () => {
   const [nome, setNome] = useState('');
@@ -15,14 +15,15 @@ export const Formulario = () => {
 
   const adicionarParticipante = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    adicionarNaLista(nome);
+    adicionarNaLista(nome.trim());
     setNome('');
     inputRef.current?.focus();
   };
+
   return (
     <Content onSubmit={adicionarParticipante}>
       <div>
-      <img src={userIcon} alt="" />
+        <img src={userIcon} alt="" />
         <input
           ref={inputRef}
           value={nome}
@@ -30,9 +31,9 @@ export const Formulario = () => {
           type="text"
           placeholder={'Insira os nomes dos participantes'}
         />
+        <button disabled={!nome}>Adicionar</button>
       </div>
 
-      <button disabled={!nome}>Adicionar</button>
       {mensagemDeErro && <p role={'alert'}>{mensagemDeErro}</p>}
     </Content>
   );
