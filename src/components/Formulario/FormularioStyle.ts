@@ -24,6 +24,10 @@ export const Content = styled.form`
       outline: none;
     }
   }
+  div {
+    flex-direction: column;
+    text-align: center;
+  }
   button {
     border-radius: 37px;
     background: #c4c4c4;
@@ -38,7 +42,9 @@ export const Content = styled.form`
   }
 
   @media screen and (min-width: 768px) {
-    flex-direction: row;
+    div {
+      flex-direction: row;
+    }
     img {
       margin-left: 30px;
       margin-top: 20px;
